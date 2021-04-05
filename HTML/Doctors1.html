@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+            background-color: #eee;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+        select {
+            width: 312px;
+            } 
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+            
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+            .dropdown {
+            float: right;
+            overflow: hidden;
+            padding-right: 35px;
+            }
+
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+           }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+           }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 14px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+           }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+           }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+           }
+
+            .container {
+                padding: 20px 40px 40px;
+                max-width: 100%;
+                }
+
+            .container__text {
+                display: inline-block;
+                width: 100%;
+                }
+            .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+                }
+
+            .collapsible:after {
+                content: '\002B';
+                color: white;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+                }
+
+            .active:after {
+                content: "\2212";
+                }
+
+            .content {
+                padding: 0px 10px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                background-color: #f1f1f1;
+                }
+
+            table {
+                width:100%;
+                }
+            
+            table, th, td {
+                border-collapse: collapse;
+               }
+            
+            th, td {
+                padding: 15px;
+                text-align: center;
+               }
+            
+            #t01 tr {
+                background-color: #eee;
+               }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="about1.html">Home</a>
+        <a href="covid1.html">Covid-19 Measures</a>
+        <a href="service1.html">Services</a>
+        <a href="Doctors1.html">Doctors</a>
+        <a href="contact_us1.html">Contact</a>
+        <a href="appointment1.html">Make an Appointment</a>
+        <a href="view_appointments1.php">View Appointments</a>
+        <div class="dropdown">
+            <button class="dropbtn">Profile 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">My Profile</a>
+              <a href="about.html">Log out</a>
+            </div>
+        </div> 
+    </div>
+
+    <h1 style="font-size:40px; text-align: center;">Our Doctors</h1>
+
+    <div class="container">
+        <div class="container__text">
+            <button class="collapsible">CARDIOLOGY</button>
+            <div class="content">
+                <table id="t01">
+                    <tr>
+                      <td>Dr. Jill<br> <p>MBBS/DIP.CARD</p></td>
+                      <td>Dr. Smith<br> <p>MBBS/DIP.CARD</td>
+                      <td>Dr. Kumar<br> <p>MBBS/DIP.CARD</td>
+                    </tr>
+                </table>           
+            </div>
+            <br>
+            <button class="collapsible">ONCOLOGY</button>
+            <div class="content">
+                <table id="t01">
+                    <tr>
+                      <td>Dr. Manoj<br> <p>MBBS/MD</p></td>
+                      <td>Dr. Mohan<br> <p>MBBS/MD</p></td>
+                    </tr>
+                </table>   
+            </div>
+            <br>
+            <button class="collapsible">NEPHROLOGY AND UROLOGY</button>
+            <div class="content">
+                <table id="t01">
+                    <tr>
+                      <td>Dr. Inderveer<br> <p>MBBS/MD/DM</p></td>
+                      <td>Dr. Raina<br> <p>MBBS/MD/DM</p></td>
+                    </tr>
+                </table>   
+            </div>
+            <br>
+            <button class="collapsible">ORTHOPAEDICS</button>
+            <div class="content">
+                <table id="t01">
+                    <tr>
+                      <td>Dr. Ashok<br> <p>MBBS/MS/DNB/MNAMS</p></td>
+                      <td>Dr. Ashfaq<br> <p>MBBS/MS/DNB/MNAMS</p></td>
+                    </tr>
+                </table>   
+            </div> <br>
+            <button class="collapsible">NEUOROLOGY</button>
+            <div class="content">
+                <table id="t01">
+                    <tr>
+                      <td>Dr. Nitin<br> <p>MBBS/MD/DM</p></td>
+                      <td>Dr. Rachna<br> <p>MBBS/MD/DM</p></td>
+                      <td>Dr. Gunjan<br> <p>MBBS/MD/DM</p></td>
+                    </tr>
+                </table>   
+            </div> <br>
+            <button class="collapsible">GASTROENTEROLOGY</button>
+            <div class="content">
+                <table id="t01">
+                    <tr>
+                      <td>Dr. Pratim<br> <p>MBBS/MRCP/MD/DNB</p></td>
+                      <td>Dr. Soumyadip<br> <p>MBBS/MRCP/MD/DNB</p></td>
+                      <td>Dr. Pradeep<br> <p>MBBS/MRCP/MD/DNB</p></td>
+                    </tr>
+                </table>   
+            </div> <br>
+            <button class="collapsible">Dermatology</button>
+            <div class="content">
+                <table id="t01">
+                    <tr>
+                      <td>Dr. Rajan<br> <p>MBBS/MD</p></td>
+                      <td>Dr. Amit<br> <p>MBBS/MD</p></td>
+                    </tr>
+                </table>   
+            </div>
+
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+
+</body>
+</html>

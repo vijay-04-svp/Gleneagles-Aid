@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="typed.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+            background-color: #eee;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            }
+        select {
+            width: 312px;
+            } 
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+            
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+            .dropdown {
+            float: right;
+            overflow: hidden;
+            padding-right: 35px;
+            }
+
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+           }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+           }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 14px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+           }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+           }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+           }
+
+            .container {
+                padding: 20px 40px 40px;
+                max-width: 100%;
+                }
+                
+
+            .container__text {
+                display: inline-block;
+                width: 50%;
+                background-color: #eee;
+                padding: 20px;
+                }
+            
+                .container__image {
+                display: inline-block;
+                vertical-align: top;
+                width: 30%;
+                padding: 20px;
+                margin-left: 150px;
+                }
+                
+        
+            .nav_down{
+            width:100%;
+            background-color:#eb582f !important;
+            border-bottom:2px solid #eb582f;
+            }
+        .nav_down div{
+            width:1200px;
+            color:#fff;
+            background-color:#eb582f;
+            font-family:calibri;
+            padding:10px;
+            text-align:left;
+            }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="about1.html">Home</a>
+        <a href="covid1.html">Covid-19 Measures</a>
+        <a href="service1.html">Services</a>
+        <a href="Doctors1.html">Doctors</a>
+        <a href="contact_us1.html">Contact</a>
+        <a href="appointment1.html">Make an Appointment</a>
+        <a href="view_appointments1.php">View Appointments</a>
+        <div class="dropdown">
+            <button class="dropbtn">Profile 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">My Profile</a>
+              <a href="about.html">Log out</a>
+            </div>
+        </div> 
+    </div>
+      
+   
+
+
+
+    <div class="container">
+        <div class="container__text">
+            <font color="#000"> OUR OUTSTANDING SERVICES</font> <br> <br>
+            <font color="#000" size="6px"> What We Offer! </font> <br> <br>
+
+            <p>Our Services includes  <font color="red"><span class="element"></span></font></p>
+
+
+            <font color="#000" size="6px"> Our Department </font> <br> <br>
+
+        <ul>
+        <li> CARDIOLOGY</li>
+        <li> ONCOLOGY</li>
+        <li> NEPHROLOGY AND UROLOGY</li>
+        <li> ORTHOPAEDICS</li>
+        <li> NEUOROLOGY</li>
+        <li> GASTROENTEROLOGY</li>
+        <li> MENTAL HEALTH</li>
+        </ul><br>
+        </div>
+        <img class="container__image" src="https://caresoft.co.in/wp-content/uploads/2016/11/Hospital-Management-software-Benefit.png">
+    </div>
+        
+
+    <script>
+        $(function(){
+            $(".element").typed({
+              strings: ["DENTAL IMPLANTS","WHITENING","VACCINATIONS","LABORATORY","MEDICAL DRESSAGE","EMERGENCY CONTRACEPTION"],
+              typeSpeed: 0,
+              // time before typing starts
+              startDelay: 2,
+              // backspacing speed
+              backSpeed: 0,
+              // time before backspacing
+              backDelay: 1500,
+              // loop
+              loop: true,
+              // false = infinite
+              loopCount: false,
+              // show cursor
+              showCursor: true,
+              // character for cursor
+              cursorChar: "|",
+    
+            });
+        });
+      </script>
+</body>
+</html>

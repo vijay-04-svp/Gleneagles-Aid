@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+          
+            .dropdown {
+            float: right;
+            overflow: hidden;
+            }
+
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+           }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+           }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 14px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+           }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+           }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+           }
+    
+        body, div, form, input, select, textarea, label, p { 
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            color: #666;
+            line-height: 22px;
+            }
+        h1 {
+            position: absolute;
+            margin: 0;
+            font-size: 38px;
+            color: #fff;
+            z-index: 2;
+            line-height: 83px;
+           }
+        textarea {
+            width: calc(100% - 12px);
+            padding: 5px;
+           }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+      width: 50%;
+      padding: 20px;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 0 8px  #669999; 
+      }
+      .banner {
+      position: relative;
+      height: 300px;
+      background-image: url("/uploads/media/default/0001/02/174b2e72df50743dfaa0a3bf9d2e59d8b42c91e1.jpeg");  
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+     
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+
+      select {
+        width: calc(100% - 0px);
+        padding: 5px;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:  #669999;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #669999;
+      color: #669999;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .item span {
+      color: red;
+      }
+      input[type=radio], input[type=checkbox]  {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      .question-answer label {
+      display: block;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+      input[type=radio]:checked + label:before, label.radio:hover:before {
+      border: 2px solid  #669999;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid  #669999;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      .flax {
+      display:flex;
+      justify-content:space-around;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background:  #669999;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background:  #a3c2c2;
+      }
+      .name-item input, .name-item div, .name-item select {
+      width: calc(50% - 20px);
+      }
+      .name-item div input select {
+      width:97%;}
+      .name-item div label {
+      display:block;
+      padding-bottom:5px;
+      }
+      }
+    </style>
+     
+     <script>
+      var specAnddoc = {};
+      specAnddoc['cardiology'] = ['Dr. Jill', 'Dr. Smith', 'Dr. Kumar'];
+      specAnddoc['oncology'] = ['Dr. Manoj', 'Dr. Mohan'];
+      specAnddoc['nephrologyandurology'] = ['Dr. Inderveer', 'DR. Raina'];
+      specAnddoc['orthopaedics'] = ['Dr. Ashok', 'Dr. Ashfaq'];
+      specAnddoc['neurology'] = ['Dr. Nitin', 'Dr. Rachna', 'Dr. Gunjan'];
+      specAnddoc['gastroentorology'] = ['Dr. Pratim', 'Dr. Soumyadeep', 'Dr. Pradeep'];
+      specAnddoc['mentalhealth'] = ['Dr. Rajan', 'Dr. Amit'];
+      
+      function Changedoctorlist() {
+        var specList = document.getElementById("speciality");
+        var docList = document.getElementById("doctor");
+        var selspec = specList.options[specList.selectedIndex].value;
+        while (docList.options.length) {
+          docList.remove(0);
+        }
+        var speciality = specAnddoc[selspec];
+        if (speciality) {
+          var i;
+          for (i = 0; i < speciality.length; i++) {
+            var sp = new Option(speciality[i]);
+            docList.options.add(sp);
+          }
+        }
+      } 
+      </script>
+      
+    
+  </head>
+  <body style="background-color: #eee;">
+
+    <div class="topnav">
+      <a href="about1.html">Home</a>
+      <a href="covid1.html">Covid-19 Measures</a>
+      <a href="service1.html">Services</a>
+      <a href="Doctors1.html">Doctors</a>
+      <a href="contact_us1.html">Contact</a>
+      <a href="appointment1.html">Make an Appointment</a>
+      <a href="view_appointments1.php">View Appointments</a>
+        <div class="dropdown">
+          <button class="dropbtn">Profile 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">My Profile</a>
+            <a href="about.html">Log out</a>
+          </div>
+      </div> 
+    </div>
+
+    <div class="testbox">
+      <form action="conn_appointment.php" method="POST">
+        <h2 style="text-align: center;">Fill up the form to Make an Appointment with Us</h2>
+        <fieldset>
+          <legend>Patient Information</legend>
+          <div class="item">
+            <label for="fname">Full Name<span>*</span></label>
+            <input id="fname" type="text" name="fname" required/>
+          </div>
+          <div class="item">
+            <label for="phone">Phone Number<span>*</span></label>
+            <input id="phone" type="text" maxlength="10" name="phone" required/>
+          </div>
+          <div class="item">
+              <label for="bdate">Birth Date <span>*</span></label>
+              <input id="bdate" type="date" name="bdate" required/>
+          </div>
+
+          <div class="item">
+            <p>Select Speciality</p>
+            <select id="speciality" name="speciality" onchange="Changedoctorlist()">
+              <option selected value="" disabled selected>Select Speciality</option>
+              <option value="cardiology">Cardiology</option> 
+              <option value="oncology">Oncology</option> 
+              <option value="nephrologyandurology">Nephrology and Urology</option>
+              <option value="orthopaedics">Orthopaedics</option> 
+              <option value="neurology">Neurology</option> 
+              <option value="gastroentorology">Gastroentorology</option>
+              <option value="mentalhealth">Dermatology</option>  
+            </select> 
+          </div>
+
+          <div class="item">
+            <p>Select Doctor</p>
+            <select id="doctor" name="doctor">
+              <option selected value="" disabled selected>Select Doctor</option> 
+            </select> 
+          </div>
+
+          <div class="item">
+            <label for="date">Date<span>*</span></label>
+            <input id="date" type="date" name="date" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="item">
+            <label for="time">Time<span>*</span></label>
+            <input id="time" type="text" name="time" required/>
+          </div>
+          
+          <div class="item">
+            <label for="instructions">Please describe the reason for this visit </label>
+            <textarea id="instructions" rows="3" name="reason"></textarea>
+          </div>
+        </fieldset>
+        <div class="btn-block">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
